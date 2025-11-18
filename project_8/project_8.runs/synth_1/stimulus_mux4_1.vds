@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Nov 18 11:47:26 2025
+# Process ID: 8080
+# Current directory: C:/Users/ADMIN/Desktop/project_8/project_8.runs/synth_1
+# Command line: vivado.exe -log stimulus_mux4_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source stimulus_mux4_1.tcl
+# Log file: C:/Users/ADMIN/Desktop/project_8/project_8.runs/synth_1/stimulus_mux4_1.vds
+# Journal file: C:/Users/ADMIN/Desktop/project_8/project_8.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source stimulus_mux4_1.tcl -notrace
+Command: synth_design -top stimulus_mux4_1 -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 7028 
+ERROR: [Synth 8-1031] w is not declared [C:/Users/ADMIN/Desktop/project_8/project_8.srcs/sources_1/new/nocode.v:1]
+ERROR: [Synth 8-1031] s is not declared [C:/Users/ADMIN/Desktop/project_8/project_8.srcs/sources_1/new/nocode.v:1]
+INFO: [Synth 8-2350] module mux4_1 ignored due to previous errors [C:/Users/ADMIN/Desktop/project_8/project_8.srcs/sources_1/new/nocode.v:1]
+INFO: [Synth 8-2350] module stimulus_mux4_1 ignored due to previous errors [C:/Users/ADMIN/Desktop/project_8/project_8.srcs/sources_1/new/nocode.v:8]
+Failed to read verilog 'C:/Users/ADMIN/Desktop/project_8/project_8.srcs/sources_1/new/nocode.v'
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Vivado Synthesis failed
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 18 11:47:36 2025...
