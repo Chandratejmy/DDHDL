@@ -1,0 +1,33 @@
+module fa(x,y,z,S,C);
+output S,C;
+input x,y,z;
+wire S1,C1,C2;
+assign S= x ^ y ^ z;
+assign C=(x&y)|(y&z)|(x&z);
+endmodule
+
+module pa4bit(input [4:1] a, input [4:1] b, input cin,output [4:1] s, output cout);
+wire[3:1]t;
+fa f1(a[1],b[1],cin,s[1],t[1]);
+fa f2(a[2],b[2],t[1],s[2],t[2]);
+fa f3(a[3],b[3],t[2],s[3],t[3]);
+fa f4(a[4],b[4],t[3],s[4],cout);
+endmodule
+
+module stimulus_pa;
+reg[4:1] a;reg[4:1] b; reg cin;
+wire [4:1]s;
+wire cout;
+pa4bit uut(.a(a),.b(b),.cin(cin),.s(s),.cout(cout));
+initial
+$monitor($time,"A=%b,B=%b,CIN=%b,COUT=%b,SUM=%b/n",a,b,cin,cout,s);
+initial
+begin
+a=4'd0;b=4'd0;cin=4'd0;
+#2 a= 4'd3;b= 4'd4;
+#2 a= 4'd2;b= 4'd5;
+#2 a= 4'd9;b= 4'd9;
+#2 a= 4'd10;b= 4'd15;
+#2 a= 4'd10;b= 4'd5;cin=1'b1;
+end 
+endmodule
